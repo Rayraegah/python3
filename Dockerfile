@@ -1,17 +1,13 @@
-FROM python:3.6.1-alpine
+FROM python:3.7-alpine
 
 RUN apk update && \
-  	apk add \
-    build-base \
-    postgresql \
-    postgresql-dev \
-    libpq
+	apk add \
+		build-base
 
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 
-COPY ./Pipfile .
-COPY ./Pipfile.lock .
+COPY ./Pipfile* .
 
 RUN pip install --upgrade pip && \
 	pip install pipenv && \
