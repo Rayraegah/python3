@@ -1,6 +1,7 @@
 import pytest
 import app as service
 
+
 @pytest.fixture
 def app():
     return service.app
