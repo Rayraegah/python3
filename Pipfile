@@ -4,8 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-asyncio = "*"
-asyncpg = "*"
 responder = "*"
 
 [dev-packages]
